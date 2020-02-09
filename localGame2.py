@@ -1,5 +1,6 @@
 import Reversi
-import myPlayer
+import monteCarloPlayer
+import alphaBetaPlayer
 import time
 from io import StringIO
 import sys
@@ -8,10 +9,10 @@ nb_tours = 0
 b = Reversi.Board(10)
 
 players = []
-player1 = myPlayer.myPlayer()
+player1 = monteCarloPlayer.myPlayer()
 player1.newGame(b._BLACK)
 players.append(player1)
-player2 = myPlayer.myPlayer()
+player2 = alphaBetaPlayer.myPlayer()
 player2.newGame(b._WHITE)
 players.append(player2)
 

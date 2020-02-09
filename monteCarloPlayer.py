@@ -39,7 +39,7 @@ class myPlayer(PlayerInterface):
 
         #if there is not enough time -> random
         if (self._startFlag):
-            if (self._deadline - time.time() < 500):
+            if (self._deadline - time.time() < 1000):
                 moves = self._board.legal_moves()
                 (c, x, y) = moves[random.randint(0, len(moves)-1)]
                 return (x, y)
